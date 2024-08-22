@@ -12,14 +12,12 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import ResumeButton from "./ResumeButton";
 
 const NavBar = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  const [buttonText, setButtonText] = useState("Resume");
 
   return (
     <Grid
@@ -62,21 +60,7 @@ const NavBar = () => {
               Projects
             </Button>
           </Link>
-          <Button
-            as="a"
-            href="/Resume.pdf"
-            download="Resume.pdf"
-            color="white"
-            fontSize="lg"
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            _hover={{
-              bgGradient: "linear(to-l, #6c22b6, #e60074)",
-            }}
-            onMouseEnter={() => setButtonText("Download")}
-            onMouseLeave={() => setButtonText("Resume")}
-          >
-            {buttonText}
-          </Button>
+          <ResumeButton />
         </HStack>
       </GridItem>
 
@@ -105,21 +89,7 @@ const NavBar = () => {
             </MenuItem>
           </MenuList>
         </Menu>
-        <Button
-          as="a"
-          href="/Resume.pdf"
-          download="Resume.pdf"
-          color="white"
-          fontSize="lg"
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          _hover={{
-            bgGradient: "linear(to-l, #6c22b6, #e60074)",
-          }}
-          onMouseEnter={() => setButtonText("Download")}
-          onMouseLeave={() => setButtonText("Resume")}
-        >
-          {buttonText}
-        </Button>
+        <ResumeButton />
       </GridItem>
     </Grid>
   );
