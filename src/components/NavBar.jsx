@@ -64,8 +64,8 @@ const NavBar = () => {
           </Link>
           <Button
             as="a"
-            href="/Sherry_Zhou_Resume.pdf"
-            download="Sherry_Zhou_Resume.pdf"
+            href="/Resume.pdf"
+            download="Resume.pdf"
             color="white"
             fontSize="lg"
             bgGradient="linear(to-l, #7928CA, #FF0080)"
@@ -106,6 +106,9 @@ const NavBar = () => {
           </MenuList>
         </Menu>
         <Button
+          as="a"
+          href="/Resume.pdf"
+          download="Resume.pdf"
           color="white"
           fontSize="lg"
           bgGradient="linear(to-l, #7928CA, #FF0080)"
