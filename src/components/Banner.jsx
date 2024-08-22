@@ -1,0 +1,61 @@
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  SimpleGrid,
+} from "@chakra-ui/react";
+import React from "react";
+import banner from "../assets/banner.png";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
+
+const Banner = () => {
+  return (
+    <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={6} padding="10px" mt={20}>
+      <Box padding={10}>
+        <Heading
+          color="white"
+          fontSize={{ base: "3xl", lg: "5xl" }}
+          fontWeight="bold"
+          marginY={5}
+        >
+          Hi! I'm Sherry <br />
+          Future Full-Stack Developer
+        </Heading>
+        <Link href="#project">
+          <Button
+            color="white"
+            fontSize="lg"
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            marginBottom={5}
+            _hover={{
+              bgGradient: "linear(to-l, #6c22b6, #e60074)",
+            }}
+          >
+            View My Projects
+          </Button>
+        </Link>
+        <Flex gap={2}>
+          <Link href="https://github.com/shiyuzhou1013" isExternal>
+            <Image src={github} width={8} height={8}></Image>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sherry-zhou-96a6302b7/"
+            isExternal
+          >
+            <Image src={linkedin} width={8} height={8}></Image>
+          </Link>
+        </Flex>
+      </Box>
+
+      <Box paddingBottom={10}>
+        <Image src={banner} width={500}></Image>
+      </Box>
+    </SimpleGrid>
+  );
+};
+
+export default Banner;
