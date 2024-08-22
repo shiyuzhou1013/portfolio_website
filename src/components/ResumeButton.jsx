@@ -8,8 +8,8 @@ const ResumeButton = () => {
   return (
     <Button
       as="a"
-      href="/Resume.pdf"
-      download="Resume.pdf"
+      href="/Resume-SherryZHOU.pdf"
+      download="Resume-SherryZHOU.pdf"
       color="white"
       fontSize="lg"
       bgGradient="linear(to-l, #7928CA, #FF0080)"
