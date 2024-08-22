@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   Heading,
@@ -11,11 +10,12 @@ import React from "react";
 import banner from "../assets/banner.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
+import MotionBoxContainer from "./MotionBoxContainer";
 
 const Banner = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={6} padding="10px" mt={20}>
-      <Box padding={10}>
+      <MotionBoxContainer padding={10}>
         <Heading
           color="white"
           fontSize={{ base: "3xl", lg: "5xl" }}
@@ -49,11 +49,11 @@ const Banner = () => {
             <Image src={linkedin} width={8} height={8}></Image>
           </Link>
         </Flex>
-      </Box>
+      </MotionBoxContainer>
 
-      <Box paddingBottom={10}>
+      <MotionBoxContainer paddingBottom={10} direction="right">
         <Image src={banner} width={500}></Image>
-      </Box>
+      </MotionBoxContainer>
     </SimpleGrid>
   );
 };

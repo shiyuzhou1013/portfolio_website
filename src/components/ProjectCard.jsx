@@ -11,6 +11,7 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import React from "react";
+import MotionBoxContainer from "./MotionBoxContainer";
 
 const ProjectCard = ({
   title,
@@ -27,11 +28,11 @@ const ProjectCard = ({
       width="100%"
       alignItems="center"
     >
-      <Box margin={5}>
+      <MotionBoxContainer margin={5}>
         <Image src={imageUrl} alt={title} />
-      </Box>
+      </MotionBoxContainer>
 
-      <Box margin={5}>
+      <MotionBoxContainer margin={5} direction="right">
         <Heading size="lg" mb={5}>
           {title}
         </Heading>
@@ -63,7 +64,7 @@ const ProjectCard = ({
             View Website
           </Button>
         </Link>
-      </Box>
+      </MotionBoxContainer>
     </SimpleGrid>
   );
 };

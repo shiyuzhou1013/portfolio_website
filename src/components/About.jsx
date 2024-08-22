@@ -1,6 +1,7 @@
 import { Box, Button, Heading, SimpleGrid, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import MotionBoxContainer from "./MotionBoxContainer";
 
 const Banner = () => {
   const frontendSkills = ["React", "React Native", "Next.js", "HTML", "CSS"];
@@ -38,7 +39,7 @@ const Banner = () => {
         padding="10px"
         width="100%"
       >
-        <Box margin={5}>
+        <MotionBoxContainer margin={5}>
           <Heading size="md" mb={5}>
             Get to know me
           </Heading>
@@ -53,9 +54,9 @@ const Banner = () => {
             grow. If you have a good opportunity that matches my skills and
             experience then don't hesitate to download my RESUME and contact me!
           </Text>
-        </Box>
+        </MotionBoxContainer>
 
-        <Box margin={5}>
+        <MotionBoxContainer margin={5} direction="right">
           <Heading size="md" mb={5}>
             My Skills
           </Heading>
@@ -80,7 +81,7 @@ const Banner = () => {
               </Button>
             ))}
           </Wrap>
-        </Box>
+        </MotionBoxContainer>
       </SimpleGrid>
     </Box>
   );
