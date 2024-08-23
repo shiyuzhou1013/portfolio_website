@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Button, Image } from "@chakra-ui/react";
+import download from "../assets/download.png";
 
 const ResumeButton = () => {
-  const [buttonText, setButtonText] = useState("Resume");
+  const [hovered, setHovered] = useState(false);
 
   return (
     <Button
@@ -12,14 +13,17 @@ const ResumeButton = () => {
       download="Resume-SherryZHOU.pdf"
       color="white"
       fontSize="lg"
+      width="100px"
       bgGradient="linear(to-l, #7928CA, #FF0080)"
       _hover={{
         bgGradient: "linear(to-l, #6c22b6, #e60074)",
       }}
-      onMouseEnter={() => setButtonText("Download")}
-      onMouseLeave={() => setButtonText("Resume")}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      justifyContent="center"
+      alignItems="center"
     >
-      {buttonText}
+      {hovered ? <Image src={download} boxSize="25px" /> : "Resume"}
     </Button>
   );
 };

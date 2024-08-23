@@ -1,11 +1,9 @@
 import {
-  Box,
   Button,
   Flex,
   Heading,
   Image,
   Link,
-  SimpleGrid,
   Stack,
   Text,
   Badge,
@@ -19,20 +17,29 @@ const ProjectCard = ({
   imageUrl,
   techStack,
   projectLink,
+  imagePosition = "left",
 }) => {
   return (
-    <SimpleGrid
-      columns={{ sm: 1, md: 2 }}
-      spacing={6}
+    <Flex
+      direction={{ sm: "column", md: "row" }}
+      alignItems="center"
       padding="10px"
       width="100%"
-      alignItems="center"
     >
-      <MotionBoxContainer margin={5}>
+      <MotionBoxContainer
+        margin={5}
+        order={imagePosition === "left" ? 1 : 2}
+        flex="1"
+      >
         <Image src={imageUrl} alt={title} />
       </MotionBoxContainer>
 
-      <MotionBoxContainer margin={5} direction="right">
+      <MotionBoxContainer
+        margin={5}
+        order={imagePosition === "left" ? 2 : 1}
+        direction="right"
+        flex="1"
+      >
         <Heading size="lg" mb={5}>
           {title}
         </Heading>
@@ -65,7 +72,7 @@ const ProjectCard = ({
           </Button>
         </Link>
       </MotionBoxContainer>
-    </SimpleGrid>
+    </Flex>
   );
 };
 

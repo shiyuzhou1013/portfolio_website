@@ -22,6 +22,7 @@ const IssueTracker = () => {
         "AWS",
       ]}
       projectLink="https://issue-tracker-inky-eight.vercel.app/"
+      imagePosition="right"
     />
   );
 };
