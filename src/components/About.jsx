@@ -25,7 +25,7 @@ const Banner = () => {
   const title = "ABOUT ME";
 
   const text =
-    "Here you will find more information about me and my current skills mostly in terms of programming and technology";
+    "Here you will find more information about me and my current skills in terms of programming and technology";
   return (
     <Box
       id="about"

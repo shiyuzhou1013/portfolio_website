@@ -6,8 +6,7 @@ import SectionTitle from "./SectionTitle";
 const Projects = () => {
   const title = "PROJECTS";
 
-  const text =
-    "Here you will find some of the personal projects that I created";
+  const text = "Here you will find some of my personal projects";
 
   return (
     <Box id="project" paddingTop="80px">
