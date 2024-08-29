@@ -12,8 +12,9 @@ const GameHub = () => {
         detailed insights and up-to-date information tailored to their
         gaming preferences."
       imageUrl={gamehub}
-      techStack={["React", "TypeScript", "Axios", "Chakra UI", "Vercel"]}
+      techStack={["React.js", "TypeScript", "Axios", "Chakra UI", "Vercel"]}
       projectLink="https://game-hub-jade-six.vercel.app/"
+      codeLink="https://github.com/shiyuzhou1013/game-hub-intermediate"
     />
   );
 };

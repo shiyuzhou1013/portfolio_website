@@ -15,13 +15,14 @@ const IssueTracker = () => {
       techStack={[
         "Next.js",
         "TypeScript",
-        "Tailwind",
+        "Tailwind CSS",
         "Radix UI",
         "Prisma",
         "NextAuth.js",
         "AWS",
       ]}
       projectLink="https://issue-tracker-inky-eight.vercel.app/"
+      codeLink="https://github.com/shiyuzhou1013/next.js-issue-tracker"
       imagePosition="right"
     />
   );

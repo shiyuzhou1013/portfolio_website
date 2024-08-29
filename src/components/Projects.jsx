@@ -2,6 +2,7 @@ import { Box, Stack } from "@chakra-ui/react";
 import GameHub from "./GameHub";
 import IssueTracker from "./IssueTracker";
 import SectionTitle from "./SectionTitle";
+import NetflixClone from "./NetflixClone";
 
 const Projects = () => {
   const title = "PROJECTS";
@@ -14,6 +15,7 @@ const Projects = () => {
       <Stack gap={20}>
         <GameHub />
         <IssueTracker />
+        <NetflixClone />
       </Stack>
     </Box>
   );

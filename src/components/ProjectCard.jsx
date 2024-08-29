@@ -17,6 +17,7 @@ const ProjectCard = ({
   imageUrl,
   techStack,
   projectLink,
+  codeLink,
   imagePosition = "left",
 }) => {
   return (
@@ -58,19 +59,36 @@ const ProjectCard = ({
             </Stack>
           </Stack>
         </Flex>
-        <Link href={projectLink} isExternal>
-          <Button
-            color="white"
-            fontSize="lg"
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            mt={8}
-            _hover={{
-              bgGradient: "linear(to-l, #6c22b6, #e60074)",
-            }}
-          >
-            View Website
-          </Button>
-        </Link>
+
+        <Flex gap={5}>
+          <Link href={projectLink} isExternal>
+            <Button
+              color="white"
+              fontSize="lg"
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              mt={8}
+              _hover={{
+                bgGradient: "linear(to-l, #6c22b6, #e60074)",
+              }}
+            >
+              View Website
+            </Button>
+          </Link>
+
+          <Link href={codeLink} isExternal>
+            <Button
+              color="white"
+              fontSize="lg"
+              bgGradient="linear(to-l, #00c6ff, #0072ff)"
+              mt={8}
+              _hover={{
+                bgGradient: "linear(to-l, #0099cc, #005bb5)",
+              }}
+            >
+              View Code
+            </Button>
+          </Link>
+        </Flex>
       </MotionBoxContainer>
     </Flex>
   );
