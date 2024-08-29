@@ -61,22 +61,22 @@ const Banner = () => {
             My Skills
           </Heading>
           <Wrap gap={3} mb={3}>
-            {frontendSkills.map((skill) => (
-              <Button pointerEvents="none" bg="gray.300">
+            {frontendSkills.map((skill, index) => (
+              <Button key={index} pointerEvents="none" bg="gray.300">
                 {skill}
               </Button>
             ))}
           </Wrap>
           <Wrap gap={3} mb={3}>
-            {backendSkills.map((skill) => (
-              <Button pointerEvents="none" bg="gray.300">
+            {backendSkills.map((skill, index) => (
+              <Button key={index} pointerEvents="none" bg="gray.300">
                 {skill}
               </Button>
             ))}
           </Wrap>
           <Wrap gap={3} mb={3}>
-            {programmingLanguages.map((skill) => (
-              <Button pointerEvents="none" bg="gray.300">
+            {programmingLanguages.map((skill, index) => (
+              <Button key={index} pointerEvents="none" bg="gray.300">
                 {skill}
               </Button>
             ))}

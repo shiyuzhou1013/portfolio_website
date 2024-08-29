@@ -23,11 +23,10 @@ const NavBar = () => {
     <Grid
       templateColumns="repeat(2, 1fr)"
       padding={5}
-      position="fixed"
-      top="0"
-      zIndex="1000"
       bg="black"
       width="100%"
+      maxWidth="100vw"
+      overflow="hidden"
     >
       <GridItem>
         <Heading
@@ -69,27 +68,29 @@ const NavBar = () => {
         justifySelf="flex-end"
         alignContent="center"
       >
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label="Options"
-            icon={<HamburgerIcon color="white" />}
-            variant="outline"
-            mr={2}
-          />
-          <MenuList minWidth="150px">
-            <MenuItem fontWeight="bold">
-              <Link onClick={scrollToTop}>Home</Link>
-            </MenuItem>
-            <MenuItem fontWeight="bold">
-              <Link href="#about">About</Link>
-            </MenuItem>
-            <MenuItem fontWeight="bold">
-              <Link href="#project">Projects</Link>
-            </MenuItem>
-          </MenuList>
-        </Menu>
-        <ResumeButton />
+        <HStack spacing={4}>
+          <ResumeButton />
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<HamburgerIcon color="white" />}
+              variant="outline"
+              mr={2}
+            />
+            <MenuList minWidth="150px">
+              <MenuItem fontWeight="bold">
+                <Link onClick={scrollToTop}>Home</Link>
+              </MenuItem>
+              <MenuItem fontWeight="bold">
+                <Link href="#about">About</Link>
+              </MenuItem>
+              <MenuItem fontWeight="bold">
+                <Link href="#project">Projects</Link>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </HStack>
       </GridItem>
     </Grid>
   );

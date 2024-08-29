@@ -13,7 +13,8 @@ const ResumeButton = () => {
       download="Resume-SherryZHOU.pdf"
       color="white"
       fontSize="lg"
-      width="100px"
+      width="90px"
+      padding={0}
       bgGradient="linear(to-l, #7928CA, #FF0080)"
       _hover={{
         bgGradient: "linear(to-l, #6c22b6, #e60074)",

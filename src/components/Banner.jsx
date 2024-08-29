@@ -14,7 +14,12 @@ import MotionBoxContainer from "./MotionBoxContainer";
 
 const Banner = () => {
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={6} padding="10px" mt={20}>
+    <SimpleGrid
+      columns={{ sm: 1, md: 2 }}
+      spacing={6}
+      padding="10px"
+      bgColor="black"
+    >
       <MotionBoxContainer padding={10}>
         <Heading
           color="white"
