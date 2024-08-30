@@ -5,6 +5,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import "./global.css";
 import Footage from "./components/Footage";
+import SkillsContainer from "./components/SkillsContainer";
 
 function App() {
   return (
@@ -12,27 +13,11 @@ function App() {
       <NavBar />
       <Banner />
       <About />
+      <SkillsContainer />
       <Projects />
       <Footage />
     </Flex>
   );
 }
-// function App() {
-//   return (
-//     <>
-//       <Box>
-//         <Flex bg="black" direction="column">
-//           <NavBar />
-//           <Banner />
-//         </Flex>
-//         <Flex direction="column" gap={10} mb={20}>
-//           <About />
-//           <Projects />
-//           <Footage />
-//         </Flex>
-//       </Box>
-//     </>
-//   );
-// }
 
 export default App;

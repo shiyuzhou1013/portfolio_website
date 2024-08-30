@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Button, Image } from "@chakra-ui/react";
-import download from "../assets/download.png";
+import download from "../assets/icons/download.png";
 
 const ResumeButton = () => {
   const [hovered, setHovered] = useState(false);

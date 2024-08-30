@@ -7,9 +7,9 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
-import banner from "../assets/banner.png";
-import github from "../assets/github.png";
-import linkedin from "../assets/linkedin.png";
+import banner from "../assets/images/banner.png";
+import github from "../assets/icons/github.png";
+import linkedin from "../assets/icons/linkedin.png";
 import MotionBoxContainer from "./MotionBoxContainer";
 
 const Banner = () => {
@@ -56,7 +56,11 @@ const Banner = () => {
         </Flex>
       </MotionBoxContainer>
 
-      <MotionBoxContainer paddingBottom={10} direction="right">
+      <MotionBoxContainer
+        paddingBottom={10}
+        direction="right"
+        display={{ base: "none", md: "block" }}
+      >
         <Image src={banner} width={500}></Image>
       </MotionBoxContainer>
     </SimpleGrid>

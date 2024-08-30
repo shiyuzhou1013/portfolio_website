@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import netflixClone from "../assets/netflixClone.png";
+import netflixClone from "../assets/images/netflixClone.png";
 
 const NetflixClone = () => {
   return (

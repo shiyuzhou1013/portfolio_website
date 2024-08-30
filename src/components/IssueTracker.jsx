@@ -1,5 +1,5 @@
 import React from "react";
-import issuetracker from "../assets/issuetracker.png";
+import issuetracker from "../assets/images/issuetracker.png";
 import ProjectCard from "./ProjectCard";
 
 const IssueTracker = () => {

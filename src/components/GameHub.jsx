@@ -1,5 +1,5 @@
 import React from "react";
-import gamehub from "../assets/gamehub.png";
+import gamehub from "../assets/images/gamehub.png";
 import ProjectCard from "./ProjectCard";
 
 const GameHub = () => {

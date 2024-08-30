@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <Box id="project" paddingTop="80px">
       <SectionTitle title={title} text={text} />
-      <Stack gap={20}>
+      <Stack gap={20} padding={{ base: 2, md: 10 }} marginX={5} mb={20}>
         <GameHub />
         <IssueTracker />
         <NetflixClone />

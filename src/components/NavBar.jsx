@@ -40,8 +40,9 @@ const NavBar = () => {
       </GridItem>
 
       <GridItem alignContent="center" display={{ base: "none", lg: "block" }}>
-        <HStack justifyContent="end" spacing={100}>
+        <HStack justifyContent="end" spacing={10}>
           <Button
+            as="a"
             variant="link"
             fontSize="xl"
             color="white"
@@ -50,15 +51,27 @@ const NavBar = () => {
             Home
           </Button>
           <Link href="#about">
-            <Button variant="link" fontSize="xl" color="white">
+            <Button as="a" variant="link" fontSize="xl" color="white">
               About
             </Button>
           </Link>
-          <Link href="#project">
-            <Button variant="link" fontSize="xl" color="white">
+          <Link href="#skills">
+            <Button as="a" variant="link" fontSize="xl" color="white">
+              Skills
+            </Button>
+          </Link>
+          <Link href="#skills">
+            <Button
+              as="a"
+              href="#project"
+              variant="link"
+              fontSize="xl"
+              color="white"
+            >
               Projects
             </Button>
           </Link>
+
           <ResumeButton />
         </HStack>
       </GridItem>
@@ -84,6 +97,9 @@ const NavBar = () => {
               </MenuItem>
               <MenuItem fontWeight="bold">
                 <Link href="#about">About</Link>
+              </MenuItem>
+              <MenuItem fontWeight="bold">
+                <Link href="#about">Skills</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
                 <Link href="#project">Projects</Link>

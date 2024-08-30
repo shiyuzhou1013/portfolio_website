@@ -32,14 +32,15 @@ const ProjectCard = ({
       maxWidth="100%"
       boxSizing="border-box"
       overflow="hidden"
-      p={5}
+      paddingY={10}
+      paddingX={{ base: 1, md: 10 }}
       borderRadius="md"
       boxShadow="lg"
       gap={5}
       bg="white"
     >
       <MotionBoxContainer
-        flex="1"
+        flex="1.5"
         direction={imagePosition === "left" ? "left" : "right"}
         transition={{ duration: 0.8, delay: 0.2 }}
         borderRadius="md"
@@ -63,7 +64,7 @@ const ProjectCard = ({
         <Heading size="lg" mb={3} color="gray.800">
           {title}
         </Heading>
-        <Text mb={4} color="gray.600">
+        <Text mb={4} color="gray.600" display={{ base: "none", sm: "block" }}>
           {description}
         </Text>
         <Box mb={4}>
