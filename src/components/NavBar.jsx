@@ -24,54 +24,39 @@ const NavBar = () => {
       templateColumns="repeat(2, 1fr)"
       padding={5}
       bg="black"
+      position="fixed"
+      top="0"
+      zIndex="100"
       width="100%"
       maxWidth="100vw"
-      overflow="hidden"
     >
       <GridItem>
-        <Heading
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          fontSize={{ base: "3xl", lg: "4xl" }}
-          fontWeight="extrabold"
-        >
-          Sherry's Portfolio
-        </Heading>
+        <Link onClick={scrollToTop}>
+          <Heading
+            bgGradient="linear(to-l, #7928CA, #FF0080)"
+            bgClip="text"
+            fontSize={{ base: "3xl", lg: "4xl" }}
+            fontWeight="extrabold"
+          >
+            Sherry's Portfolio
+          </Heading>
+        </Link>
       </GridItem>
 
       <GridItem alignContent="center" display={{ base: "none", lg: "block" }}>
         <HStack justifyContent="end" spacing={10}>
-          <Button
-            as="a"
-            variant="link"
-            fontSize="xl"
-            color="white"
-            onClick={scrollToTop}
-          >
+          <Link onClick={scrollToTop} fontSize="xl" color="white">
             Home
-          </Button>
-          <Link href="#about">
-            <Button as="a" variant="link" fontSize="xl" color="white">
-              About
-            </Button>
           </Link>
-          <Link href="#skills">
-            <Button as="a" variant="link" fontSize="xl" color="white">
-              Skills
-            </Button>
+          <Link href="#about" fontSize="xl" color="white">
+            About
           </Link>
-          <Link href="#skills">
-            <Button
-              as="a"
-              href="#project"
-              variant="link"
-              fontSize="xl"
-              color="white"
-            >
-              Projects
-            </Button>
+          <Link href="#skills" fontSize="xl" color="white">
+            Skills
           </Link>
-
+          <Link href="#project" fontSize="xl" color="white">
+            Projects
+          </Link>
           <ResumeButton />
         </HStack>
       </GridItem>
@@ -99,7 +84,7 @@ const NavBar = () => {
                 <Link href="#about">About</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
-                <Link href="#about">Skills</Link>
+                <Link href="#skills">Skills</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
                 <Link href="#project">Projects</Link>

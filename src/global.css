@@ -5,15 +5,3 @@ html {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-}
-
-.no-scrollbar {
-  scrollbar-width: none;
-}
-
-body {
-  overflow-x: hidden;
-}

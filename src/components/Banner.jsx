@@ -18,6 +18,7 @@ const Banner = () => {
       columns={{ sm: 1, md: 2 }}
       spacing={6}
       padding="10px"
+      mt={20}
       bgColor="black"
     >
       <MotionBoxContainer padding={10}>
