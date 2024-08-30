@@ -1,6 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-  Button,
   Grid,
   GridItem,
   Heading,
@@ -14,11 +13,21 @@ import {
 } from "@chakra-ui/react";
 import ResumeButton from "./ResumeButton";
 
-const NavBar = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
+export const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    window.scrollTo({
+      top: section.offsetTop,
+      behavior: "smooth",
+    });
+  }
+};
+
+const NavBar = () => {
   return (
     <Grid
       templateColumns="repeat(2, 1fr)"
@@ -48,13 +57,25 @@ const NavBar = () => {
           <Link onClick={scrollToTop} fontSize="xl" color="white">
             Home
           </Link>
-          <Link href="#about" fontSize="xl" color="white">
+          <Link
+            onClick={() => scrollToSection("about")}
+            fontSize="xl"
+            color="white"
+          >
             About
           </Link>
-          <Link href="#skills" fontSize="xl" color="white">
+          <Link
+            onClick={() => scrollToSection("skills")}
+            fontSize="xl"
+            color="white"
+          >
             Skills
           </Link>
-          <Link href="#project" fontSize="xl" color="white">
+          <Link
+            onClick={() => scrollToSection("projects")}
+            fontSize="xl"
+            color="white"
+          >
             Projects
           </Link>
           <ResumeButton />

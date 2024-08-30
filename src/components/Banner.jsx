@@ -11,6 +11,7 @@ import banner from "../assets/images/banner.png";
 import github from "../assets/icons/github.png";
 import linkedin from "../assets/icons/linkedin.png";
 import MotionBoxContainer from "./MotionBoxContainer";
+import { scrollToSection } from "./NavBar";
 
 const Banner = () => {
   return (
@@ -31,7 +32,7 @@ const Banner = () => {
           Hi! I'm Sherry <br />
           Future Full-Stack Developer
         </Heading>
-        <Link href="#project">
+        <Link onClick={() => scrollToSection("projects")}>
           <Button
             color="white"
             fontSize="lg"

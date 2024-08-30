@@ -33,6 +33,8 @@ const skills = [
 const SkillSlider = () => {
   const [showArrow, setShowArrow] = useState(false);
   const sliderRef = useRef(null);
+  const scrollIntervalRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState(1);
 
   const scrollLeft = () => {
     if (sliderRef.current) {
@@ -52,12 +54,62 @@ const SkillSlider = () => {
     }
   };
 
+  useEffect(() => {
+    const startAutoScroll = () => {
+      scrollIntervalRef.current = setInterval(() => {
+        if (sliderRef.current) {
+          if (
+            scrollDirection === 1 &&
+            sliderRef.current.scrollLeft + sliderRef.current.clientWidth >=
+              sliderRef.current.scrollWidth
+          ) {
+            setScrollDirection(-1);
+          } else if (
+            scrollDirection === -1 &&
+            sliderRef.current.scrollLeft <= 0
+          ) {
+            setScrollDirection(1);
+          }
+          sliderRef.current.scrollBy({
+            left: 2 * scrollDirection,
+            behavior: "smooth",
+          });
+        }
+      }, 20);
+    };
+
+    startAutoScroll();
+
+    return () => clearInterval(scrollIntervalRef.current);
+  }, [scrollDirection]);
+
   const handleMouseEnter = () => {
     setShowArrow(true);
+    clearInterval(scrollIntervalRef.current);
   };
 
   const handleMouseLeave = () => {
     setShowArrow(false);
+    scrollIntervalRef.current = setInterval(() => {
+      if (sliderRef.current) {
+        if (
+          scrollDirection === 1 &&
+          sliderRef.current.scrollLeft + sliderRef.current.clientWidth >=
+            sliderRef.current.scrollWidth
+        ) {
+          setScrollDirection(-1);
+        } else if (
+          scrollDirection === -1 &&
+          sliderRef.current.scrollLeft <= 0
+        ) {
+          setScrollDirection(1);
+        }
+        sliderRef.current.scrollBy({
+          left: 2 * scrollDirection,
+          behavior: "smooth",
+        });
+      }
+    }, 20);
   };
 
   return (

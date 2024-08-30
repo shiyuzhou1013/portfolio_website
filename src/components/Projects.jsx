@@ -10,7 +10,7 @@ const Projects = () => {
   const text = "Here you will find some of my personal projects";
 
   return (
-    <Box id="project" paddingTop="80px">
+    <Box id="projects" paddingTop="80px">
       <SectionTitle title={title} text={text} />
       <Stack gap={20} padding={{ base: 2, md: 10 }} marginX={5} mb={20}>
         <GameHub />
