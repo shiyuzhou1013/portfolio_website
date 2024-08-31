@@ -24,4 +24,4 @@ npm run dev
 3. Netflix Clone - https://netflix-clone-ggk3.onrender.com/
 ![alt text](netflixclone.png)
 
-# More exciting projects are on the way! ![alt text](image-1.gif)
+# More exciting projects are on the way! 🍵
