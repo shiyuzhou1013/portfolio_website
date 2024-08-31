@@ -24,7 +24,7 @@ const Banner = () => {
       justifyItems="center"
       bgColor="black"
     >
-      <MotionBoxContainer padding={10}>
+      <MotionBoxContainer direction="left" padding={10}>
         <Heading
           color="white"
           fontSize={{ base: "3xl", lg: "5xl" }}
@@ -62,7 +62,6 @@ const Banner = () => {
 
       <MotionBoxContainer
         paddingBottom={10}
-        direction="right"
         display={{ base: "none", md: "block" }}
       >
         <Image src={banner} width={500} mt={16}></Image>

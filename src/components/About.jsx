@@ -16,6 +16,7 @@ const About = () => {
         <SectionTitle title={title} />
 
         <MotionBoxContainer
+        direction="bottom"
           margin={{ base: 2, md: 10 }}
           padding={{ base: 2, md: 10 }}
         >
