@@ -13,3 +13,15 @@ npm run dev
 
 # Skills
 ![alt text](<my skills video.gif>)
+
+# Projects
+1. GameHub - https://game-hub-jade-six.vercel.app/
+![alt text](gamehub.png)
+
+2. Issue Tracker - https://issue-tracker-inky-eight.vercel.app/
+![alt text](issuetracker.png)
+
+3. Netflix Clone - https://netflix-clone-ggk3.onrender.com/
+![alt text](netflixclone.png)
+
+# More exciting projects are on the way! ![alt text](image.png)
