@@ -20,6 +20,7 @@ const Banner = () => {
       spacing={6}
       padding="10px"
       mt={20}
+      alignItems="center"
       bgColor="black"
     >
       <MotionBoxContainer padding={10}>
