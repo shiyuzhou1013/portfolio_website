@@ -65,7 +65,7 @@ const Banner = () => {
         direction="right"
         display={{ base: "none", md: "block" }}
       >
-        <Image src={banner} width={500} ></Image>
+        <Image src={banner} width={500} mt={16}></Image>
       </MotionBoxContainer>
     </SimpleGrid> 
   );
