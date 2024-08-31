@@ -102,13 +102,13 @@ const NavBar = () => {
                 <Link onClick={scrollToTop}>Home</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
-                <Link href="#about">About</Link>
+                <Link onClick={() => scrollToSection("about")}>About</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
-                <Link href="#skills">Skills</Link>
+                <Link onClick={() => scrollToSection("skills")}>Skills</Link>
               </MenuItem>
               <MenuItem fontWeight="bold">
-                <Link href="#project">Projects</Link>
+                <Link onClick={() => scrollToSection("projects")}>Projects</Link>
               </MenuItem>
             </MenuList>
           </Menu>
